@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/home.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../lib/jquery-1.8.2.min.js"></script>
+    <title>ThaparEaz</title>
+
+    <script>
+        $(document).ready(()=>{
+            $(".sub-btn").click(()=>{
+                var value=$("#mSearch").val();
+                if($("#food-btn").is(":checked"))
+                {
+                    console.log("bib")
+                    var eurl="/show-food?thisFood="+value;   
+                }
+                if($("#shop-btn").is(":checked"))
+                {
+                    console.log("heeee")
+                    var eurl="/show-shop?thisShop="+value;   
+                }
+                if($("#loc-btn").is(":checked"))
+                {
+                    console.log("jdkw")
+                    var eurl="/show-loc?thisLoc="+value;   
+                }
+
+                $.get(eurl,(jsonAr)=>{
+                    console.log(jsonAr);
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="main">
+        <div class="nav-cont">
+            <div class="navbar">
+                <div class="logo">
+                    <h2>ThaparEaz</h2>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/About">About Us</a></li>
+                        <li><a href="/help">Help</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="upper-cont">
+            <div class="upper-container">
+                <div class="logo-cont">
+                    <h1><span style="color: #2191D0;">Thapar</span><span style="color: #F99E1B ;">Eaz</span></h1>
+                </div> 
+                <div class="in-con">
+                    <h2>Deals from your favorite booking sites</h2>
+                    <h3>Try searching for a city, a specific hotel, or even a landmark!</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="search-cont">
+            <div class="s-cont">
+                
+                <div class="radio-btn">
+                    <input type="radio" id="shop-btn" name="sel_btn" value="shop">
+                    <label for="shop">Shop</label><br>
+
+                    <input type="radio" id="food-btn" name="sel_btn" value="food">
+                    <label for="food">Food</label><br>
+
+                    <input type="radio" id="loc-btn" name="sel_btn" value="loc">
+                    <label for="loc">Location</label>
+                </div>
+                <div class="search">
+                    
+                        <input class="s-bar" type="text" placeholder="Enter a food item or location" id="mSearch">
+                        <input class="sub-btn" type="submit" formaction="/result">
+                    
+                </div>
+
+                <div class="image">
+                    <img src="assets/4487783-01.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="slide-cont">
+            <div class="slide-container">
+                <h2>These top destinations are just a click away</h2>
+
+                <div class="slide-show" style="margin-top: 2em;">
+                    <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,f_auto,h_258,q_auto,w_258/categoryimages/34/40/344056_v71.jpeg" alt="">
+                    <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,f_auto,h_258,q_auto,w_258/categoryimages/34/40/344056_v71.jpeg" alt="">
+                    <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,f_auto,h_258,q_auto,w_258/categoryimages/34/40/344056_v71.jpeg" alt="">
+                    <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,f_auto,h_258,q_auto,w_258/categoryimages/34/40/344056_v71.jpeg" alt="">
+                    <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,f_auto,h_258,q_auto,w_258/categoryimages/34/40/344056_v71.jpeg" alt="">
+                    <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,f_auto,h_258,q_auto,w_258/categoryimages/34/40/344056_v71.jpeg" alt="">
+                    <img src="https://imgcy.trivago.com/c_fill,d_dummy.jpeg,f_auto,h_258,q_auto,w_258/categoryimages/34/40/344056_v71.jpeg" alt="">
+                </div>
+                <div class="arrows">
+                    <button class="l-arrow"><</button>
+                    <button class="r-arrow">></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cont-row">
+                <div class="cont-col">
+                    <h2>trivago's global accommodation search</h2>
+                    <p>
+                    trivago’s accommodation search allows users to compare prices in just a few clicks 
+                    from more than 300 booking sites for more than 5.0 million hotels and other types 
+                    of accommodation in over 190 countries. With 1.4 billion visits annually to our site,
+                    travellers regularly use the stay comparison to compare deals in the same city. Get 
+                    information for weekend trips to cities like Liverpool or Birmingham and you can find
+                    the right stay on trivago quickly and easily. New York City and its surrounding area 
+                    are great for trips that are a week or longer with plenty of stays available.
+                    </p>
+                </div>
+                <div class="cont-col">
+                    <h2>trivago's global accommodation search</h2>
+                    <p>
+                    trivago’s accommodation search allows users to compare prices in just a few clicks 
+                    from more than 300 booking sites for more than 5.0 million hotels and other types 
+                    of accommodation in over 190 countries. With 1.4 billion visits annually to our site,
+                    travellers regularly use the stay comparison to compare deals in the same city. Get 
+                    information for weekend trips to cities like Liverpool or Birmingham and you can find
+                    the right stay on trivago quickly and easily. New York City and its surrounding area 
+                    are great for trips that are a week or longer with plenty of stays available.
+                    </p>
+                </div>
+            </div>
+            <div class="cont-row">
+                <div class="cont-col">
+                    <h2>trivago's global accommodation search</h2>
+                    <p>
+                    trivago’s accommodation search allows users to compare prices in just a few clicks 
+                    from more than 300 booking sites for more than 5.0 million hotels and other types 
+                    of accommodation in over 190 countries. With 1.4 billion visits annually to our site,
+                    travellers regularly use the stay comparison to compare deals in the same city. Get 
+                    information for weekend trips to cities like Liverpool or Birmingham and you can find
+                    the right stay on trivago quickly and easily. New York City and its surrounding area 
+                    are great for trips that are a week or longer with plenty of stays available.
+                    </p>
+                </div>
+                <div class="cont-col">
+                    <h2>trivago's global accommodation search</h2>
+                    <p>
+                    trivago’s accommodation search allows users to compare prices in just a few clicks 
+                    from more than 300 booking sites for more than 5.0 million hotels and other types 
+                    of accommodation in over 190 countries. With 1.4 billion visits annually to our site,
+                    travellers regularly use the stay comparison to compare deals in the same city. Get 
+                    information for weekend trips to cities like Liverpool or Birmingham and you can find
+                    the right stay on trivago quickly and easily. New York City and its surrounding area 
+                    are great for trips that are a week or longer with plenty of stays available.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="in-footer">
+                <div class="social-media">
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="bottom">
+                    <div class="logo-bottom">
+                        ThaparEaz
+                    </div>
+                    <div class="copyRight">
+                        Copyright 2022 thapareaz | All rights reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
